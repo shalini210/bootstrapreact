@@ -16,6 +16,7 @@ import Cart from './components/Cart';
 import Profile from './components/Profile';
 import Teams from './components/Teams';
 import Showproducts from './components/Showproducts';
+import ProductDetails from './components/ProductDetails';
 function App() {
   return (
     <>
@@ -29,13 +30,12 @@ function App() {
       <Route path="/login" element={<Login></Login>}></Route>
       <Route path='/cart' element={<Cart></Cart>}></Route>
       <Route path='/showproducts/:category' element={<Showproducts></Showproducts>}></Route>
+      <Route path ="/productDetails/:pid" element={<ProductDetails></ProductDetails>}></Route>
     </Routes>
-    <div>    
-      
+    <div>          
     this is from app 
     </div>
     </>
   );
 }
-
 export default App;

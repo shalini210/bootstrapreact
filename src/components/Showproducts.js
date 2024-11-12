@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router'
+import { Link } from 'react-router-dom'
 import { products } from '../data/productdata'
 export default function Showproducts() {
 
@@ -11,7 +12,9 @@ export default function Showproducts() {
     return <div className='col-3'>
             <img src={p.thumbnail}/>
             <div>{p.title}</div>
-    </div>})
+            <Link to={"/productDetails/"+p.id}>View Details</Link>
+    </div>
+    })
   return (
     <div className='row'>
         <h1>{category}</h1>
