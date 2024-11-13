@@ -18,7 +18,7 @@ export default function Categories() {
         </div>
     })
   return (
-    <div className='row'>
+    <div className='row bg-danger'>
 {categoriesUI}
     </div>
   )

@@ -14,8 +14,10 @@ export default function ProductDetails() {
         </div>
         <div className='col-6 offset-1'>
     <h1>{product.title}</h1>
-    <p>{product.rating} <FaStar fill='blue'></FaStar> | {product.reviews.length+" "}reviews</p>
-    <h4> {product.price +" "}  <span className='text-danger'> (-{product.discountPercentage}%)</span></h4>
+    <p>{product.rating} <FaStar fill='blue'></FaStar> 
+    | {product.reviews.length+" "}reviews</p>
+    <h4> {product.price +" "}  <span className='text-danger'>
+         (-{product.discountPercentage}%)</span></h4>
     <p>{product.description}</p>
 
         </div>

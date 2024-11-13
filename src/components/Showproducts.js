@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import { products } from '../data/productdata'
+import Categories from './Categories'
 export default function Showproducts() {
 
     var params = useParams()
@@ -17,7 +18,7 @@ export default function Showproducts() {
     })
   return (
     <div className='row'>
-        <h1>{category}</h1>
+        <Categories></Categories>
 {productsui}
     </div>
   )
