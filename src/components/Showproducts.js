@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
+import { Cartcontext } from '../contexts/Cartcontext'
 import { products } from '../data/productdata'
 import Categories from './Categories'
 export default function Showproducts() {
@@ -17,9 +18,11 @@ export default function Showproducts() {
     </div>
     })
   return (
+    
     <div className='row'>
         <Categories></Categories>
 {productsui}
     </div>
+    
   )
 }

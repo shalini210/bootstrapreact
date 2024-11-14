@@ -18,23 +18,29 @@ import Teams from './components/Teams';
 import Showproducts from './components/Showproducts';
 import ProductDetails from './components/ProductDetails';
 import Home from './components/forcontexteg/Home';
+import {useState} from 'react'
+import { Cartcontext } from './contexts/Cartcontext';
+import React from 'react';
 function App() {
+  const [cart,setcart] = useState([])
   return (
     <>
   {/* <Menu></Menu> */}
   
+  <Cartcontext.Provider value={{cartp:cart,setcartp:setcart}}>
     <Routes>
       <Route path='/teams' element={<Teams></Teams>}></Route>
       <Route path="/portfolio" element={<Profile></Profile>}></Route>
       <Route path="/categories" element={<Categories></Categories>    }></Route>
       <Route path="/smallproducts" element={<Smallproducts></Smallproducts>}></Route>
-      {/* <Route path="/" element={<Categories></Categories>}></Route> */}
-      <Route path='/' element={<Home></Home>}></Route>
+      <Route path="/" element={<Categories></Categories>}></Route>
+      {/* <Route path='/' element={<Home></Home>}></Route> */}
       <Route path="/login" element={<Login></Login>}></Route>
       <Route path='/cart' element={<Cart></Cart>}></Route>
       <Route path='/showproducts/:category' element={<Showproducts></Showproducts>}></Route>
       <Route path ="/productDetails/:pid" element={<ProductDetails></ProductDetails>}></Route>
     </Routes>
+    </Cartcontext.Provider>
     <div>          
     this is from app 
     </div>
