@@ -3,7 +3,9 @@ import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import { Cartcontext } from '../contexts/Cartcontext'
 import { products } from '../data/productdata'
+import Addtocart from './Addtocart'
 import Categories from './Categories'
+import Counter from './Counter'
 export default function Showproducts() {
 
     var params = useParams()
@@ -15,6 +17,7 @@ export default function Showproducts() {
             <img src={p.thumbnail}/>
             <div>{p.title}</div>
             <Link to={"/productDetails/"+p.id}>View Details</Link>
+            <Addtocart product={p}></Addtocart>
     </div>
     })
   return (

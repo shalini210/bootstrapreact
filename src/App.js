@@ -29,6 +29,7 @@ function App() {
   
   <Cartcontext.Provider value={{cartp:cart,setcartp:setcart}}>
     <Routes>
+      <Route path='/cart' element={<Cart></Cart>}></Route>
       <Route path='/teams' element={<Teams></Teams>}></Route>
       <Route path="/portfolio" element={<Profile></Profile>}></Route>
       <Route path="/categories" element={<Categories></Categories>    }></Route>

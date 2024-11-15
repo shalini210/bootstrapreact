@@ -3,12 +3,14 @@ import { FaStar } from "react-icons/fa6";
 import { useParams } from 'react-router'
 import { Cartcontext } from '../contexts/Cartcontext';
 import { products } from '../data/productdata';
+import Addtocart from './Addtocart';
+import Categories from './Categories';
+import Counter from "./Counter"
 export default function ProductDetails() {
-  var cartcon = useContext(Cartcontext)
+var cartcon = useContext(Cartcontext)
 let addtocart = (p)=>
 {
 var cartItem = {name:p.title,price:p.price}
-
 let oldcart = cartcon.cartp;
 oldcart.push(cartItem)
 cartcon.setcartp(oldcart)
@@ -18,6 +20,8 @@ console.log(cartcon.cartp)
     var pid = params.pid;
     var product = products.find((p)=>p.id==pid)    
   return (
+    <>
+    <Categories></Categories>
     <div className='row'>
         <div className='col-3 offset-1'>
         <i class="bi bi-0-square-fill"></i>
@@ -30,8 +34,10 @@ console.log(cartcon.cartp)
     <h4> {product.price +" "}  <span className='text-danger'>
          (-{product.discountPercentage}%)</span></h4>
     <p>{product.description}</p>
-<input type="button" value="Add to cart" onClick={()=>addtocart(product)}/>
+<Addtocart></Addtocart>
+
         </div>
     </div>
+    </>
   )
 }

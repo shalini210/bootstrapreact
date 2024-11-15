@@ -18,8 +18,11 @@ export default function Categories() {
         </div>
     })
   return (
+    <>
+    <Link to="/cart">Cart</Link>
     <div className='row bg-danger'>
 {categoriesUI}
     </div>
+    </>
   )
 }
