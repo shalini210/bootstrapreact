@@ -25,7 +25,7 @@ let increaseQuantity = ()=>
 {
  setqty(qty+1)
 let cart = cartcon.cartp;
-let index = oldcart.findIndex((p)=>p.name ==props.product.title)
+let index = cart.findIndex((p)=>p.name ==props.product.title)
 cart[index].qty ++;
 }
 
@@ -33,7 +33,7 @@ let decreaseQuantity = ()=>
 {
   setqty(qty-1)
 let cart = cartcon.cartp;
-let index = oldcart.findIndex((p)=>p.name ==props.product.title)
+let index = cart.findIndex((p)=>p.name ==props.product.title)
 cart[index].qty --;
 }
  var ui =<div><input type = "button" value="-" onClick={()=>decreaseQuantity()}/>
