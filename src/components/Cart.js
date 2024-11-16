@@ -12,9 +12,10 @@ export default function Cart() {
   let d =   (cart.cartp).map((item)=>
     {
       return <div className='row'>
-<div className='col-4'>{item.name}</div>
-<div className='col-4'>{item.price}</div>
-<div className='col-4'></div>
+<div className='col-3'>{item.name}</div>
+<div className='col-3'>{item.price}</div>
+<div className='col-3'>{item.qty}</div>
+<div className='col-3'>{item.qty * item.price}</div>
       </div>
       
     })
